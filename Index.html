@@ -2,15 +2,8 @@
 <HR>
 <body background="https://raw.githubusercontent.com/hackercommunity/uploader/master/1501796842-50.110.244.106.png">
 <HR>
-<!DOCTYPE html>
-<html>
-<body>
-
-<form action="upload.php"method="post"enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file"name="fileToUpload"id="fileToUpload">
-    <input type="submit"value="Upload exe"name="submit">
+<form enctype="multipart/form-data" action="upload.php" method="POST">
+<input type="hidden" name="MAX_FILE_SIZE" value="600" />
+Choose a file to upload: <input name="uploadedfile" type="file" /><br />
+<input type="submit" value="Upload File" />
 </form>
-
-</body>
-</html>
