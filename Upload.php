@@ -15,3 +15,13 @@ if(isset($_POST["submit"])) {
     }
 }
 ?>
+<?php
+if ($handle = opendir('/uploads/exe')) {
+    while (false !== ($file = readdir($handle))) {
+        if ($file != "." && $file != "..") {
+            echo '<a href="http://hackercommunity.github.io/' . $file . '">' . $file . '</a><br />';
+        }
+    }
+    closedir($handle);
+}
+?>
